@@ -1,7 +1,11 @@
+using GalaxyQuest.Interfaces;
+using GalaxyQuest.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddSingleton<IStarwarsApi, StarwarsApi>();
 
 var app = builder.Build();
 
